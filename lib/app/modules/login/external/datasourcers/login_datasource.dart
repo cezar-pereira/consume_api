@@ -11,5 +11,6 @@ class LoginDatasource implements LoginDataSourceInterface {
   @override
   Future<bool> logout() async {
     return true;
+    // throw Exception('Error Fake');
   }
 }

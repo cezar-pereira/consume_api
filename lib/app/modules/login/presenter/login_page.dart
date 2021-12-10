@@ -25,7 +25,9 @@ class _LoginPageState extends ModularState<LoginPage, LoginCubit> {
       body: BlocBuilder(
         bloc: store,
         builder: (context, state) {
-          if (state is LoginSuccessState) print('go to home');
+          if (state is LoginSuccessState) {
+            Modular.to.pushReplacementNamed('/home/');
+          }
 
           if (state is LoginErrorState) showError(error: state.error.message);
 

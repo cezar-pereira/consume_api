@@ -1,3 +1,4 @@
+import 'package:consume_api/app/modules/home/presenter/home_module.dart';
 import 'package:consume_api/app/modules/login/presenter/login_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -8,5 +9,6 @@ class AppModule extends Module {
   @override
   final List<ModularRoute> routes = [
     ModuleRoute(Modular.initialRoute, module: LoginModule()),
+    ModuleRoute('/home', module: HomeModule()),
   ];
 }

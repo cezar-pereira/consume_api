@@ -13,7 +13,7 @@ void main() {
 
   setUpAll(() {
     repo = LoginRepositoryMock();
-    usecase = Logout(repository: repo);
+    usecase = LogoutUsecase(repository: repo);
   });
 
   test('Should return TRUE', () async {

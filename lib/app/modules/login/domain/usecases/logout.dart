@@ -6,9 +6,9 @@ abstract class LogoutInterface {
   Future<Either<FailureInterface, bool>> call();
 }
 
-class Logout implements LogoutInterface {
+class LogoutUsecase implements LogoutInterface {
   final LoginRepositoryInterface repository;
-  Logout({required this.repository});
+  LogoutUsecase({required this.repository});
 
   @override
   Future<Either<FailureInterface, bool>> call() async {
